@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Birthstone</title>
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+    
+        <!-- Compiled and minified JavaScript -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h2>
+            <% if !@birthstone_data %>
+            Your month is invalid!
+            <% else %>
+            For the month of <%= @month.capitalize %> the birthstone is <%= @birthstone_data[0] %>
+            <img src= "<%= @birthstone_data[1]%>" width="400px"/>
+            <% end %>
+            </h2>
+        </div>
+    </body>
+</html>
